@@ -17,7 +17,19 @@
 python -m install_truth_guard check README.md
 python -m install_truth_guard check README.md --json
 python -m install_truth_guard check README.md --offline
+python -m install_truth_guard check README.md --ignore-ecosystem docker
 ```
 
 Cargo と Docker の宣言は解析されますが、既定では未対応として通知されます。
 `--strict-unsupported` を使うと失敗として扱えます。
+
+## オプション
+
+- `--json`: 機械可読な結果を出力します。
+- `--allow-unpublished NAME`: 意図的に未公開のパッケージまたはイメージの宣言を許可します。
+- `--ignore-ecosystem ECOSYSTEM`: レジストリ確認と出力の前に、指定したエコシステムの
+  インストール宣言を除外します。複数回指定できます。例:
+  `--ignore-ecosystem cargo --ignore-ecosystem docker`。
+- `--strict-unsupported`: 未対応のエコシステムを失敗として扱います。
+- `--timeout SECONDS`: レジストリ確認のタイムアウトを設定します。
+- `--offline`: レジストリにアクセスせず、Markdown の解析だけを行います。

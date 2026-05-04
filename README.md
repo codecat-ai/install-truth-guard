@@ -31,6 +31,7 @@ From a clone of this repository:
 python -m install_truth_guard check README.md
 python -m install_truth_guard check README.md --json
 python -m install_truth_guard check README.md --offline
+python -m install_truth_guard check README.md --ignore-ecosystem docker
 ```
 
 For development, install the project in an isolated environment from the local
@@ -46,6 +47,9 @@ python -m ruff format --check .
 
 - `--json`: emit machine-readable results.
 - `--allow-unpublished NAME`: suppress an intentional unpublished claim.
+- `--ignore-ecosystem ECOSYSTEM`: omit parsed claims for an ecosystem before
+  registry checks and output. Repeat to ignore multiple ecosystems, for example
+  `--ignore-ecosystem cargo --ignore-ecosystem docker`.
 - `--strict-unsupported`: fail on unsupported ecosystems.
 - `--timeout SECONDS`: set the registry timeout.
 - `--offline`: parse Markdown without contacting registries.
