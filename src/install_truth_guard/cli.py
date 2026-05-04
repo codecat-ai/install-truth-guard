@@ -20,6 +20,8 @@ def main(argv: Sequence[str] | None = None, *, lookup: Lookup | None = None) -> 
     for path in paths:
         text = path.read_text(encoding="utf-8")
         claims.extend(parse_markdown(text, file_path=str(path)))
+    ignored_ecosystems = set(args.ignore_ecosystem)
+    claims = [claim for claim in claims if claim.ecosystem not in ignored_ecosystems]
 
     results = check_claims(
         claims,
@@ -74,6 +76,13 @@ def _add_check_arguments(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--timeout", type=float, default=5.0, help="registry timeout in seconds")
     parser.add_argument(
         "--offline", action="store_true", help="parse only and skip registry checks"
+    )
+    parser.add_argument(
+        "--ignore-ecosystem",
+        action="append",
+        default=[],
+        metavar="ECOSYSTEM",
+        help="omit parsed install claims for an ecosystem before checking",
     )
 
 
