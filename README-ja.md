@@ -1,6 +1,6 @@
 # install-truth-guard
 
-[English](README.md) | [中文](README-zh.md) | [日本語](README-jp.md)
+[English](README.md) | [中文](README-zh.md) | [日本語](README-ja.md)
 
 
 `install-truth-guard` は README のインストール手順が実際の公開状態と合っているか

@@ -6,7 +6,7 @@ def test_required_project_files_exist() -> None:
         "pyproject.toml",
         "README.md",
         "README-zh.md",
-        "README-jp.md",
+        "README-ja.md",
         "LICENSE",
         "CHANGELOG.md",
         "CONTRIBUTING.md",

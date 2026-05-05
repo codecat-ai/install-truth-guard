@@ -34,4 +34,4 @@ jobs:
       - name: Test
         run: pytest -q
       - name: Verify repository files
-        run: test -f LICENSE && test -f README.md && test -f README-zh.md && test -f README-jp.md
+        run: test -f LICENSE && test -f README.md && test -f README-zh.md && test -f README-ja.md
