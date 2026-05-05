@@ -1,5 +1,8 @@
 # install-truth-guard
 
+[English](README.md) | [中文](README-zh.md) | [日本語](README-jp.md)
+
+
 `install-truth-guard` は README のインストール手順が実際の公開状態と合っているか
 を確認する CI 向けツールです。Markdown 内のパッケージマネージャーコマンドを解析し、
 対応済みの npm と PyPI について読み取り専用のレジストリ確認を行います。
