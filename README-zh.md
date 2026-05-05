@@ -1,5 +1,8 @@
 # install-truth-guard
 
+[English](README.md) | [中文](README-zh.md) | [日本語](README-jp.md)
+
+
 `install-truth-guard` 是一个适合 CI 使用的 README 安装声明检查工具。它会解析
 Markdown 中的包管理器命令，并对已支持的生态进行只读注册表查询，避免文档在产物
 发布前就宣称可以安装。

@@ -1,5 +1,8 @@
 # install-truth-guard
 
+[English](README.md) | [中文](README-zh.md) | [日本語](README-jp.md)
+
+
 `install-truth-guard` is a CI-friendly checker for README install claims. It
 parses Markdown for package-manager commands and verifies supported package
 names against read-only registries, so documentation does not advertise install
